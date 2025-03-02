@@ -15,6 +15,6 @@ public class CheckoutPage {
             .located(By.id("postal-code"));
 
     public static final Target CONTINUE_BUTTON = Target.the("Botón para continuar con la compra")
-            .located(By.id("continue"));
+            .locatedBy("//input[@class='btn_primary cart_button']");
 
 }

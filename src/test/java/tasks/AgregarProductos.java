@@ -24,7 +24,7 @@ public class AgregarProductos implements Task {
     public <T extends Actor> void performAs(T actor) {
         for (String producto : productos) {
             actor.attemptsTo(
-                    Click.on(ProductsPage.addToCarButton(producto))
+                    Click.on(ProductsPage.addToCartButton(producto))
             );
         }
     }

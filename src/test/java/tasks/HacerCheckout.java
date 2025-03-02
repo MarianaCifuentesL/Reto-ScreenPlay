@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import ui.CarPage;
+import ui.CartPage;
 
 public class HacerCheckout implements Task {
 
@@ -16,7 +16,7 @@ public class HacerCheckout implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(CarPage.CHECKOUT_BUTTON)
+                Click.on(CartPage.CHECKOUT_BUTTON)
         );
     }
 }

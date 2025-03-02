@@ -11,6 +11,7 @@ import questions.MensajeConfirmacionCompra;
 import tasks.*;
 
 import java.util.Collections;
+import java.util.List;
 
 import static constants.Constantes.*;
 
@@ -29,17 +30,25 @@ public class ShoppingSteps {
 
     @Cuando("ordena los productos por {string}")
     public void ordenaLosProductosPor(String criterio){
-
         OnStage.theActorCalled(ACTOR).attemptsTo(OrdenarProductos.ordenarProductos(criterio));
     }
 
 
     @Y("agrega los siguientes productos al carrito:")
     public void agregaLosSiguientesProductosAlCarrito(io.cucumber.datatable.DataTable productos) {
-        productos.asList().forEach(producto ->
-                OnStage.theActorCalled(ACTOR).attemptsTo(AgregarProductos.agregarProductos(Collections.singletonList(producto)))
-        );
+        // Obtener la lista de productos y excluir la primera fila (encabezado)
+        List<String> nombresDeProductos = productos.asList(String.class).subList(1, productos.asList().size());
+
+        // Verificar qué productos estamos recibiendo
+        System.out.println("Lista de productos recibida: " + nombresDeProductos);
+
+        // Iterar sobre los productos corregidos
+        nombresDeProductos.forEach(producto -> {
+            System.out.println("Producto recibido: " + producto);
+            OnStage.theActorCalled(ACTOR).attemptsTo(AgregarProductos.agregarProductos(Collections.singletonList(producto)));
+        });
     }
+
 
 
     @Y("elimina el producto {string} del carrito")

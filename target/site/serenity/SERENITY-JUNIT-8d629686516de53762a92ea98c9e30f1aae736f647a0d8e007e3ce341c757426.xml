@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Compra de productos en Swag Labs" skipped="0" tests="1" time="0.58" timestamp="2025-03-02 05:02:38"><testcase name="Ordenar productos, agregar y eliminar del carrito, y completar la compra"><failure message="Undefined default URL for page object PageObject" type="java.lang.AssertionError">Undefined default URL for page object PageObject</failure><system-err>Undefined default URL for page object PageObject&#13;
+hook.AbrirNavegador.performAs(AbrirNavegador.java:19)&#13;
+steps.ShoppingSteps.elUsuarioHaIniciadoSesiónEnSwagLabs(ShoppingSteps.java:22)&#13;
+✽.el usuario ha iniciado sesión en Swag Labs(classpath:features/shopping.feature:6)&#13;
+</system-err></testcase></testsuite>

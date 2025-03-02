@@ -16,7 +16,7 @@ public class AbrirNavegador implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Open.browserOn(new LoginPage()));
+        actor.attemptsTo(Open.url(url));
     }
 
     public static AbrirNavegador abrirNavegador(String url) {
