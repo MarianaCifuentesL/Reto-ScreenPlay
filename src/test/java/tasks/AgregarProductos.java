@@ -1,18 +1,22 @@
 package tasks;
 
+import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.Click;
+import tasks.steps.ClickSteps;
+import ui.ProductsPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ui.ProductsPage;
 import java.util.List;
 
 public class AgregarProductos implements Task {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AgregarProductos.class);
-    private List<String> productos;
+    private final List<String> productos;
+
+    @Steps
+    private ClickSteps clickSteps;
 
     public AgregarProductos(List<String> productos) {
         this.productos = productos;
@@ -25,9 +29,9 @@ public class AgregarProductos implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         for (String producto : productos) {
-            LOGGER.info("Agregando producto al carrito: {}", producto);
-            actor.attemptsTo(Click.on(ProductsPage.addToCartButton(producto)));
+            clickSteps.clickOn(actor, ProductsPage.addToCartButton(producto));
+            LOGGER.info("{} agrega el producto '{}' al carrito", actor.getName(), producto);
+
         }
-        LOGGER.info("Productos añadidos al carrito exitosamente");
     }
 }

@@ -1,20 +1,27 @@
 package tasks;
 
-import net.serenitybdd.annotations.Step;
+import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
+import tasks.steps.ClickSteps;
+import tasks.steps.InputSteps;
+import ui.LoginPage;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ui.LoginPage;
 
 public class IniciarSesion implements Task {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(IniciarSesion.class);
-    private String usuario;
-    private String contraseña;
+    private final String usuario;
+    private final String contraseña;
+
+    @Steps
+    private InputSteps inputSteps;
+
+    @Steps
+    private ClickSteps clickSteps;
 
     public IniciarSesion(String usuario, String contraseña) {
         this.usuario = usuario;
@@ -25,15 +32,10 @@ public class IniciarSesion implements Task {
         return Tasks.instrumented(IniciarSesion.class, usuario, contraseña);
     }
 
-
     @Override
     public <T extends Actor> void performAs(T actor) {
-        LOGGER.info("Iniciando sesión con credenciales asignadas");
-        actor.attemptsTo(
-                Enter.theValue(usuario).into(LoginPage.USER_INPUT),
-                Enter.theValue(contraseña).into(LoginPage.PASSWORD_INPUT),
-                Click.on(LoginPage.LOGIN_BUTTON)
-        );
-        LOGGER.info("Inicio de sesión exitoso");
+        inputSteps.enterText(actor, usuario, LoginPage.USER_INPUT);
+        inputSteps.enterText(actor, contraseña, LoginPage.PASSWORD_INPUT);
+        clickSteps.clickOn(actor, LoginPage.LOGIN_BUTTON);
     }
 }

@@ -1,18 +1,22 @@
 package tasks;
 
+import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.Click;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import tasks.steps.ClickSteps;
 import ui.CartPage;
 import ui.ProductsPage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class EliminarProducto implements Task {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EliminarProducto.class);
-    private String producto;
+    private final String producto;
+
+    @Steps
+    private ClickSteps clickSteps;
 
     public EliminarProducto(String producto) {
         this.producto = producto;
@@ -24,10 +28,8 @@ public class EliminarProducto implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                Click.on(ProductsPage.CAR_ICON),
-                Click.on(CartPage.removeProductButton(producto))
-        );
-        LOGGER.info("Producto eliminado exitosamente");
+        clickSteps.clickOn(actor, ProductsPage.CAR_ICON);
+        clickSteps.clickOn(actor, CartPage.removeProductButton(producto));
+        LOGGER.info("{} eliminó el producto '{}' del carrito", actor.getName(), producto);
     }
 }

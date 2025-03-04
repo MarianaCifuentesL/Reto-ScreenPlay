@@ -221,7 +221,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 03-03-2025 20:26:20</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 04-03-2025 13:57:43</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -309,48 +309,48 @@
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>mar. 03, 2025 20:25:56</td>
+                    <td>mar. 04, 2025 13:57:22</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>mar. 03, 2025 20:26:13</td>
+                    <td>mar. 04, 2025 13:57:36</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>17s</td>
+                    <td>14s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>7s</td>
+                    <td>3s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>9s</td>
+                    <td>10s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>8s</td>
+                    <td>6s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>17s</td>
+                    <td>13s</td>
                 </tr>
                 </tbody>
             </table>
@@ -400,7 +400,7 @@
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>17s</td>
+                    <td>14s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -410,7 +410,7 @@
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>7s</td>
+                    <td>3s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -421,30 +421,30 @@
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>9s</td>
+                    <td>10s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>mar. 03, 2025 20:25:56</td>
+                    <td>mar. 04, 2025 13:57:22</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>8s</td>
+                    <td>6s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>mar. 03, 2025 20:26:13</td>
+                    <td>mar. 04, 2025 13:57:36</td>
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>17s</td>
+                    <td>13s</td>
                 </tr>
                 </tbody>
             </table>
@@ -469,58 +469,69 @@
                                                                 <tbody>
                                                                     <tr class="scenario-result SUCCESS">
                                                                         <td>
-                                                                                <a href="#">Inicio de sesión con usuario bloqueado en Swag Labs</a>
+                                                                                <a href="#">Funcionalidades de inicio de sesión y compra en Swag Labs</a>
                                                                         </td>
-                                                                        <td data-order="Intentar iniciar sesión con un usuario bloqueado">
-                                                                                    <a href="84b3f2722bb85f139364c6f9b10c0f570c8c7339f8d4c67c0a62c111ec2ff112.html">Intentar iniciar sesión con un usuario bloqueado</a>
+                                                                        <td data-order="Ordenar productos, agregar y eliminar del carrito, y completar la compra">
+                                                                            <i class="bi bi-table"
+                                                                               title="Data Driven Scenario"> <a
+                                                                                        href="d5e39f6e80fd14eedafbcfa2bafcbc8b6219993ecabc77cbf0b38580ac2160c9.html">Ordenar productos, agregar y eliminar del carrito, y completar la compra</a>
+                                                                                <br/>
+                                                                                    <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 1 passing test case
+                                                                                    <br/>
                                                                         </td>
                                                                         <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span>
                                                                         </td>
-                                                                        <td>3</td>
-                                                                        <td>Dado el usuario está en la página de inicio de sesión
-Cuando el usuario inicia sesión con usuario credenciales inválidas
-Entonces debería ver un mensaje de error que dice "Epic sadface: Sorry, this user has been locked out."
+                                                                        <td>9</td>
+                                                                        <td>Dado un usuario ingresó a la página principal de Swag Labs
+Y inició sesión con el usuario "<usuario>" y la contraseña "<contraseña>"
+Cuando ordena los productos por "<criterioOrden>"
+Y agrega los siguientes productos al carrito:
+
+
+|Producto|
+|---|
+|<primerProducto>|
+|<segundoProducto>|
+
+Y elimina el producto "<primerProducto>" del carrito
+Y procede al checkout
+Y completa el formulario de compra con los datos:
+
+
+|Nombre | Apellido | Código Postal|
+|---|---|---|
+|<nombre> | <apellido> | <codigoPostal>|
+
+Y finaliza la compra
+Entonces debería ver el mensaje "<mensaje>" confirmando la compra
 </td>
-                                                                        <td data-order="1741051556">20:25:56</td>
-                                                                        <td>7s 294ms</td>
+                                                                        <td data-order="1741114642">13:57:22</td>
+                                                                        <td>10s 110ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="scenario-result SUCCESS">
                                                                         <td>
-                                                                                <a href="#">Compra de productos en Swag Labs</a>
+                                                                                <a href="#">Funcionalidades de inicio de sesión y compra en Swag Labs</a>
                                                                         </td>
-                                                                        <td data-order="Ordenar productos, agregar y eliminar del carrito, y completar la compra">
-                                                                                    <a href="4ade2520cbe44ce06918d184b82e9c017faa33f903be1cd92ea1ee1ff152cb3f.html">Ordenar productos, agregar y eliminar del carrito, y completar la compra</a>
+                                                                        <td data-order="Intentar iniciar sesión con un usuario bloqueado">
+                                                                            <i class="bi bi-table"
+                                                                               title="Data Driven Scenario"> <a
+                                                                                        href="0b4b95b0eafd9595065f1f4fdcce8fb6dfb305a50ded3556e8ffa94df692d309.html">Intentar iniciar sesión con un usuario bloqueado</a>
+                                                                                <br/>
+                                                                                    <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 1 passing test case
+                                                                                    <br/>
                                                                         </td>
                                                                         <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span>
                                                                         </td>
-                                                                        <td>8</td>
-                                                                        <td>Dado el usuario ha iniciado sesión en Swag Labs
-Cuando ordena los productos por "Price (low to high)"
-Y agrega los siguientes productos al carrito:
-
-
-| Producto |
-|---|
-| Sauce Labs Onesie |
-| Sauce Labs Bike Light |
-
-Y elimina el producto "Sauce Labs Bike Light" del carrito
-Y procede al checkout
-Y completa el formulario de compra con:
-
-
-| Nombre | Apellido | Código Postal |
-|---|---|---|
-| Juan | Pérez | 12345 |
-
-Y finaliza la compra
-Entonces debería ver el mensaje "THANK YOU FOR YOUR ORDER"
+                                                                        <td>3</td>
+                                                                        <td>Dado un usuario ingresó a la página principal de Swag Labs
+Cuando intenta iniciar sesión con el usuario "<usuario>" y la contraseña "<contraseña>"
+Entonces debería ver un mensaje de error que dice "<mensaje>"
 </td>
-                                                                        <td data-order="1741051563">20:26:03</td>
-                                                                        <td>9s 710ms</td>
+                                                                        <td data-order="1741114652">13:57:32</td>
+                                                                        <td>3s 583ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -783,7 +794,7 @@ Entonces debería ver el mensaje "THANK YOU FOR YOUR ORDER"
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','2','0','0','0','0','0','0'],
+                data: ['0','1','1','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

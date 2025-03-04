@@ -7,7 +7,7 @@ import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import questions.MensajeErrorLogin;
-import tasks.IniciarSesionBloqueada;
+import tasks.IniciarSesion;
 import static constants.Constantes.*;
 
 public class LockedUserStepDefinition {
@@ -22,7 +22,7 @@ public class LockedUserStepDefinition {
     @Cuando("intenta iniciar sesión con el usuario {string} y la contraseña {string}")
     public void intentaIniciarSesiónConElUsuarioYLaContraseña(String usuario, String contraseña) {
         OnStage.theActorCalled(ACTOR).attemptsTo(
-                IniciarSesionBloqueada.iniciarSesionBloqueada(usuario, contraseña)
+                IniciarSesion.iniciarSesion(usuario, contraseña)
         );
     }
 

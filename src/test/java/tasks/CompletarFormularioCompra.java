@@ -1,20 +1,27 @@
 package tasks;
 
+import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
+import tasks.steps.ClickSteps;
+import tasks.steps.InputSteps;
+import ui.CheckoutPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ui.CheckoutPage;
 
 public class CompletarFormularioCompra implements Task {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CompletarFormularioCompra.class);
-    private String nombre;
-    private String apellido;
-    private String codigoPostal;
+    private final String nombre;
+    private final String apellido;
+    private final String codigoPostal;
+
+    @Steps
+    private InputSteps inputSteps;
+
+    @Steps
+    private ClickSteps clickSteps;
 
     public CompletarFormularioCompra(String nombre, String apellido, String codigoPostal) {
         this.nombre = nombre;
@@ -28,12 +35,11 @@ public class CompletarFormularioCompra implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                Enter.theValue(nombre).into(CheckoutPage.NAME_INPUT),
-                Enter.theValue(apellido).into(CheckoutPage.LASTNAME_INPUT),
-                Enter.theValue(codigoPostal).into(CheckoutPage.POSTALCODE_INPUT),
-                Click.on(CheckoutPage.CONTINUE_BUTTON)
-        );
-        LOGGER.info("Formulario completado exitosamente");
+
+        inputSteps.enterText(actor, nombre, CheckoutPage.NAME_INPUT);
+        inputSteps.enterText(actor, apellido, CheckoutPage.LASTNAME_INPUT);
+        inputSteps.enterText(actor, codigoPostal, CheckoutPage.POSTALCODE_INPUT);
+        clickSteps.clickOn(actor, CheckoutPage.CONTINUE_BUTTON);
+        LOGGER.info("Formulario de compra completado");
     }
 }

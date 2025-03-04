@@ -130,7 +130,7 @@
                 > <span class="truncate-40"><a
                     href="342f3bb9a16a2f413bdb6b4d3c549662d4cbc9433314ca9ed34d49d0d2391b74.html">Shopping</a></span>
                 > <span class="truncate-60"><a
-                    href="4ade2520cbe44ce06918d184b82e9c017faa33f903be1cd92ea1ee1ff152cb3f.html">Ordenar productos, agregar y eliminar del carrito, y completar la compra </a></span>
+                    href="0b4b95b0eafd9595065f1f4fdcce8fb6dfb305a50ded3556e8ffa94df692d309.html">Intentar iniciar sesi&oacute;n con un usuario bloqueado </a></span>
                 > Screenshots
             </span>
         </div>
@@ -152,7 +152,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 03-03-2025 20:26</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 04-03-2025 13:57</span>
     <br style="clear:left"/>
 </div>
 
@@ -168,12 +168,14 @@
                             <div>
                                 <h3 class="discreet-story-header">
                                     <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
-                                    <span class="story-header-title">Compra De Productos En Swag Labs </span>
+                                    <span class="story-header-title">Funcionalidades De Inicio De Sesión Y Compra En Swag Labs </span>
                                     <span class="badge tag-badge" style="">Feature</span>
                                 </h3>
 
                                 <div class="discreet-requirement-narrative-title">
-                                
+                                Como usuario de Swag Labs<br />
+Quiero probar el inicio de sesión y la compra de productos<br />
+Para asegurarme de que el sistema funciona correctamente
                                 </div>
                             </div>
 
@@ -196,7 +198,7 @@
                         <td colspan="2" class="test-title-bar">
                             <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Ordenar productos, agregar y eliminar del carrito, y completar la compra
+                                <span class="success-color">Intentar iniciar sesi&oacute;n con un usuario bloqueado
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -210,71 +212,39 @@
 
     <div class="clr"></div>
 
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado un usuario ingresó a la página principal de Swag Labs<br>Cuando intenta iniciar sesión con el usuario "&lt;usuario&gt;" y la contraseña "&lt;contraseña&gt;"<br>Entonces debería ver un mensaje de error que dice "&lt;mensaje&gt;"</div>
+    </div>
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="3ff109fb67496d9ef3b702d62b1504c89db399e5a25340600c5b7fa2a809e439.png" title=" Dado el usuario ha iniciado sesi&oacute;n en Swag Labs" width="0"/>
+                <img src="3ff109fb67496d9ef3b702d62b1504c89db399e5a25340600c5b7fa2a809e439.png" title=" 1: Intentar iniciar sesi&oacute;n con un usuario bloqueado ({usuario=locked_out_user, contrase&ntilde;a=secret_sauce, mensaje=Epic sadface: Sorry, this user has been locked out.})" width="0"/>
+                <img src="3ff109fb67496d9ef3b702d62b1504c89db399e5a25340600c5b7fa2a809e439.png" title=" Dado un usuario ingres&oacute; a la p&aacute;gina principal de Swag Labs" width="0"/>
                 <img src="3ff109fb67496d9ef3b702d62b1504c89db399e5a25340600c5b7fa2a809e439.png" title=" Mariana abrir navegador" width="0"/>
                 <img src="3ff109fb67496d9ef3b702d62b1504c89db399e5a25340600c5b7fa2a809e439.png" title=" Mariana opens the browser at https://www.saucedemo.com/v1/index.html" width="0"/>
                 <img src="3ff109fb67496d9ef3b702d62b1504c89db399e5a25340600c5b7fa2a809e439.png" title=" Mariana abrir navegador (completed)" width="0"/>
-                <img src="abc94fa83fc724fb2116b73e6e4ee93dd031b6f6d09897ceaf7ef08e4516ef99.png" title=" El usuario inicia sesi&oacute;n con usuario Mariana y contrase&ntilde;a {1}" width="0"/>
-                <img src="abc94fa83fc724fb2116b73e6e4ee93dd031b6f6d09897ceaf7ef08e4516ef99.png" title=" Mariana enters 'standard_user' into Campo de usuario" width="0"/>
-                <img src="912033f287538b68b8235dd9fab9233d61a98728af282c65fc712cb1ee851410.png" title=" Mariana enters 'secret_sauce' into Campo de contrase&ntilde;a" width="0"/>
-                <img src="3727cc45aa3230789a00c449fd160d9c76ebddc77284e0dff8c73ec58864469e.png" title=" Mariana clicks on Bot&oacute;n de inicio de sesi&oacute;n" width="0"/>
-                <img src="3727cc45aa3230789a00c449fd160d9c76ebddc77284e0dff8c73ec58864469e.png" title=" El usuario inicia sesi&oacute;n con usuario Mariana y contrase&ntilde;a {1} (completed)" width="0"/>
-                <img src="3727cc45aa3230789a00c449fd160d9c76ebddc77284e0dff8c73ec58864469e.png" title=" Dado el usuario ha iniciado sesi&oacute;n en Swag Labs (completed)" width="0"/>
-                <img src="6c1c328b5e0ea21f535351e6ed79ee4b5dac1880136ad6313327c160700a2e60.png" title=" Cuando ordena los productos por &quot;Price (low to high)&quot;" width="0"/>
-                <img src="6c1c328b5e0ea21f535351e6ed79ee4b5dac1880136ad6313327c160700a2e60.png" title=" Mariana ordenar productos" width="0"/>
-                <img src="6c1c328b5e0ea21f535351e6ed79ee4b5dac1880136ad6313327c160700a2e60.png" title=" Mariana selects Price (low to high) on Selector de orden de productos" width="0"/>
-                <img src="6c1c328b5e0ea21f535351e6ed79ee4b5dac1880136ad6313327c160700a2e60.png" title=" Mariana ordenar productos (completed)" width="0"/>
-                <img src="6c1c328b5e0ea21f535351e6ed79ee4b5dac1880136ad6313327c160700a2e60.png" title=" Cuando ordena los productos por &quot;Price (low to high)&quot; (completed)" width="0"/>
-                <img src="2b3e8249e89246181a6328c6fe36dfd14a9ff1775769ed054a1b924013670521.png" title=" Y agrega los siguientes productos al carrito:
-| Producto |
-| Sauce Labs Onesie |
-| Sauce Labs Bike Light |" width="0"/>
-                <img src="2b3e8249e89246181a6328c6fe36dfd14a9ff1775769ed054a1b924013670521.png" title=" Mariana agregar productos" width="0"/>
-                <img src="2b3e8249e89246181a6328c6fe36dfd14a9ff1775769ed054a1b924013670521.png" title=" Mariana clicks on Bot&oacute;n para agregar el producto Sauce Labs Onesie" width="0"/>
-                <img src="2b3e8249e89246181a6328c6fe36dfd14a9ff1775769ed054a1b924013670521.png" title=" Mariana agregar productos (completed)" width="0"/>
-                <img src="dafd499f25f4669f8c65ffe856657454c66dcf9f68215e28fe59483eda8a9d99.png" title=" Mariana agregar productos" width="0"/>
-                <img src="dafd499f25f4669f8c65ffe856657454c66dcf9f68215e28fe59483eda8a9d99.png" title=" Mariana clicks on Bot&oacute;n para agregar el producto Sauce Labs Bike Light" width="0"/>
-                <img src="dafd499f25f4669f8c65ffe856657454c66dcf9f68215e28fe59483eda8a9d99.png" title=" Y agrega los siguientes productos al carrito:
-| Producto |
-| Sauce Labs Onesie |
-| Sauce Labs Bike Light | (completed)" width="0"/>
-                <img src="1ce92c7ac6c264adbc518e53204a47bd380a9057a8aabc757011586b3922aada.png" title=" Y elimina el producto &quot;Sauce Labs Bike Light&quot; del carrito" width="0"/>
-                <img src="1ce92c7ac6c264adbc518e53204a47bd380a9057a8aabc757011586b3922aada.png" title=" Mariana eliminar producto" width="0"/>
-                <img src="1ce92c7ac6c264adbc518e53204a47bd380a9057a8aabc757011586b3922aada.png" title=" Mariana clicks on Icono del carrito de compras" width="0"/>
-                <img src="b132a577ba2ef99e3b4cdd411f519fc4bf2a1d9a770e46b1c54f724c7751ad7f.png" title=" Mariana clicks on Bot&oacute;n para eliminar el producto Sauce Labs Bike Light" width="0"/>
-                <img src="b132a577ba2ef99e3b4cdd411f519fc4bf2a1d9a770e46b1c54f724c7751ad7f.png" title=" Mariana eliminar producto (completed)" width="0"/>
-                <img src="b132a577ba2ef99e3b4cdd411f519fc4bf2a1d9a770e46b1c54f724c7751ad7f.png" title=" Y elimina el producto &quot;Sauce Labs Bike Light&quot; del carrito (completed)" width="0"/>
-                <img src="45b4cc6f6665653f13d1f10ccf80c5deb535485be7c3605461722b38cd7fc342.png" title=" Y procede al checkout" width="0"/>
-                <img src="45b4cc6f6665653f13d1f10ccf80c5deb535485be7c3605461722b38cd7fc342.png" title=" Mariana hacer checkout" width="0"/>
-                <img src="45b4cc6f6665653f13d1f10ccf80c5deb535485be7c3605461722b38cd7fc342.png" title=" Mariana clicks on Bot&oacute;n para proceder al checkout" width="0"/>
-                <img src="45b4cc6f6665653f13d1f10ccf80c5deb535485be7c3605461722b38cd7fc342.png" title=" Mariana hacer checkout (completed)" width="0"/>
-                <img src="45b4cc6f6665653f13d1f10ccf80c5deb535485be7c3605461722b38cd7fc342.png" title=" Y procede al checkout (completed)" width="0"/>
-                <img src="3dd596a2344b58b48d5bad6b7429c88b07bf96d5aaa3c6050289991231ca1417.png" title=" Y completa el formulario de compra con:
-| Nombre | Apellido | C&oacute;digo Postal |
-| Juan | P&eacute;rez | 12345 |" width="0"/>
-                <img src="3dd596a2344b58b48d5bad6b7429c88b07bf96d5aaa3c6050289991231ca1417.png" title=" Mariana completar formulario compra" width="0"/>
-                <img src="3dd596a2344b58b48d5bad6b7429c88b07bf96d5aaa3c6050289991231ca1417.png" title=" Mariana enters 'Juan' into Campo de nombre" width="0"/>
-                <img src="11018b32937917e7fe861799a1f91d4066975e2f7d9007e0ee37a14ffcce219c.png" title=" Mariana enters 'P&eacute;rez' into Campo de apellido" width="0"/>
-                <img src="801641cbbf488940b182f5dd2da49e9f77c68b06330fa57444b9242ae7b565e0.png" title=" Mariana enters '12345' into Campo de c&oacute;digo postal" width="0"/>
-                <img src="7203a8b6a13b53fa6257c67484b2ecd8b37b94393178e16add8ea3b94d7195e1.png" title=" Mariana clicks on Bot&oacute;n para continuar con la compra" width="0"/>
-                <img src="7203a8b6a13b53fa6257c67484b2ecd8b37b94393178e16add8ea3b94d7195e1.png" title=" Mariana completar formulario compra (completed)" width="0"/>
-                <img src="7203a8b6a13b53fa6257c67484b2ecd8b37b94393178e16add8ea3b94d7195e1.png" title=" Y completa el formulario de compra con:
-| Nombre | Apellido | C&oacute;digo Postal |
-| Juan | P&eacute;rez | 12345 | (completed)" width="0"/>
-                <img src="0128d8ef21c0703e9c71f1fa21514f330563be4be8eda992a36dda62cb9d2b54.png" title=" Y finaliza la compra" width="0"/>
-                <img src="0128d8ef21c0703e9c71f1fa21514f330563be4be8eda992a36dda62cb9d2b54.png" title=" Mariana finalizar compra" width="0"/>
-                <img src="0128d8ef21c0703e9c71f1fa21514f330563be4be8eda992a36dda62cb9d2b54.png" title=" Mariana clicks on Bot&oacute;n para finalizar la compra" width="0"/>
-                <img src="0128d8ef21c0703e9c71f1fa21514f330563be4be8eda992a36dda62cb9d2b54.png" title=" Mariana finalizar compra (completed)" width="0"/>
-                <img src="0128d8ef21c0703e9c71f1fa21514f330563be4be8eda992a36dda62cb9d2b54.png" title=" Y finaliza la compra (completed)" width="0"/>
-                <img src="0128d8ef21c0703e9c71f1fa21514f330563be4be8eda992a36dda62cb9d2b54.png" title=" Entonces deber&iacute;a ver el mensaje &quot;THANK YOU FOR YOUR ORDER&quot;" width="0"/>
-                <img src="0128d8ef21c0703e9c71f1fa21514f330563be4be8eda992a36dda62cb9d2b54.png" title=" Mariana should see  that is equal to: &lt;&quot;THANK YOU FOR YOUR ORDER&quot;&gt;" width="0"/>
+                <img src="3ff109fb67496d9ef3b702d62b1504c89db399e5a25340600c5b7fa2a809e439.png" title=" Dado un usuario ingres&oacute; a la p&aacute;gina principal de Swag Labs (completed)" width="0"/>
+                <img src="cd0c63c38a9193d51e8214db5d9bd4d8db46a20470f220e611a7d008baba98b5.png" title=" Cuando intenta iniciar sesi&oacute;n con el usuario &quot;locked_out_user&quot; y la contrase&ntilde;a &quot;secret_sauce&quot;" width="0"/>
+                <img src="cd0c63c38a9193d51e8214db5d9bd4d8db46a20470f220e611a7d008baba98b5.png" title=" Mariana iniciar sesion" width="0"/>
+                <img src="cd0c63c38a9193d51e8214db5d9bd4d8db46a20470f220e611a7d008baba98b5.png" title=" Mariana ingresa 'locked_out_user' en 'Campo de usuario'" width="0"/>
+                <img src="cd0c63c38a9193d51e8214db5d9bd4d8db46a20470f220e611a7d008baba98b5.png" title=" Mariana enters 'locked_out_user' into Campo de usuario" width="0"/>
+                <img src="cd0c63c38a9193d51e8214db5d9bd4d8db46a20470f220e611a7d008baba98b5.png" title=" Mariana ingresa 'locked_out_user' en 'Campo de usuario' (completed)" width="0"/>
+                <img src="0b0bfa318875d773b0ea49213a8d69a8f3c319c5c7f8922bbe7df925a37f3d70.png" title=" Mariana ingresa 'secret_sauce' en 'Campo de contrase&ntilde;a'" width="0"/>
+                <img src="0b0bfa318875d773b0ea49213a8d69a8f3c319c5c7f8922bbe7df925a37f3d70.png" title=" Mariana enters 'secret_sauce' into Campo de contrase&ntilde;a" width="0"/>
+                <img src="0b0bfa318875d773b0ea49213a8d69a8f3c319c5c7f8922bbe7df925a37f3d70.png" title=" Mariana ingresa 'secret_sauce' en 'Campo de contrase&ntilde;a' (completed)" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" Mariana hace clic en el bot&oacute;n 'Bot&oacute;n de inicio de sesi&oacute;n'" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" Mariana clicks on Bot&oacute;n de inicio de sesi&oacute;n" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" Mariana hace clic en el bot&oacute;n 'Bot&oacute;n de inicio de sesi&oacute;n' (completed)" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" Mariana iniciar sesion (completed)" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" Cuando intenta iniciar sesi&oacute;n con el usuario &quot;locked_out_user&quot; y la contrase&ntilde;a &quot;secret_sauce&quot; (completed)" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" Entonces deber&iacute;a ver un mensaje de error que dice &quot;Epic sadface: Sorry, this user has been locked out.&quot;" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" Mariana should see  that is equal to: &lt;&quot;Epic sadface: Sorry, this user has been locked out.&quot;&gt;" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" 1: Intentar iniciar sesi&oacute;n con un usuario bloqueado ({usuario=locked_out_user, contrase&ntilde;a=secret_sauce, mensaje=Epic sadface: Sorry, this user has been locked out.})" width="0"/>
 
-                <img src="0128d8ef21c0703e9c71f1fa21514f330563be4be8eda992a36dda62cb9d2b54.png" title=" Entonces debería ver el mensaje "THANK YOU FOR YOUR ORDER" (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+                <img src="bc7d2bd4df42e4a5fb36b70e2092ee0bfe1f28f83894c9c47e756812db817fdf.png" title=" Entonces debería ver un mensaje de error que dice "Epic sadface: Sorry, this user has been locked out." (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
             </div>
         </div>
 
