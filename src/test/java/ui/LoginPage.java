@@ -15,9 +15,6 @@ public class LoginPage extends PageObject {
     public static final Target LOGIN_BUTTON = Target.the("Botón de inicio de sesión")
             .located(By.id("login-button"));
 
-    public static final Target ERROR_BUTTON = Target.the("Mensaje de error en el login")
-            .locatedBy("//button [@class='error-button']");
-//
-//    public static final Target ERROR_MESSAGE = Target.the("Mensaje de error en el login")
-//            .locatedBy("//h3[contains(text(), "sadface")]");
+    public static final Target ERROR_MESSAGE = Target.the("Mensaje de error en el login")
+            .locatedBy("//h3[@data-test='error']");
 }

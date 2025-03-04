@@ -5,10 +5,13 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ui.CheckoutPage;
 
 public class CompletarFormularioCompra implements Task {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(CompletarFormularioCompra.class);
     private String nombre;
     private String apellido;
     private String codigoPostal;
@@ -31,5 +34,6 @@ public class CompletarFormularioCompra implements Task {
                 Enter.theValue(codigoPostal).into(CheckoutPage.POSTALCODE_INPUT),
                 Click.on(CheckoutPage.CONTINUE_BUTTON)
         );
+        LOGGER.info("Formulario completado exitosamente");
     }
 }

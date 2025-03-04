@@ -6,34 +6,29 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import ui.LoginPage;
 
-public class IniciarSesion implements Task {
+public class IniciarSesionBloqueada implements Task {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IniciarSesion.class);
-    private String usuario;
-    private String contraseña;
+    private final String usuario;
+    private final String contraseña;
 
-    public IniciarSesion(String usuario, String contraseña) {
+    public IniciarSesionBloqueada(String usuario, String contraseña) {
         this.usuario = usuario;
         this.contraseña = contraseña;
     }
 
-    public static IniciarSesion iniciarSesion(String usuario, String contraseña) {
-        return Tasks.instrumented(IniciarSesion.class, usuario, contraseña);
+    public static IniciarSesionBloqueada iniciarSesionBloqueada(String usuario, String contraseña) {
+        return Tasks.instrumented(IniciarSesionBloqueada.class, usuario, contraseña);
     }
 
-
     @Override
+    @Step("{0} intenta iniciar sesión con usuario bloqueado: #usuario AAAAAAAA")
     public <T extends Actor> void performAs(T actor) {
-        LOGGER.info("Iniciando sesión con credenciales asignadas");
         actor.attemptsTo(
                 Enter.theValue(usuario).into(LoginPage.USER_INPUT),
                 Enter.theValue(contraseña).into(LoginPage.PASSWORD_INPUT),
                 Click.on(LoginPage.LOGIN_BUTTON)
         );
-        LOGGER.info("Inicio de sesión exitoso");
     }
 }

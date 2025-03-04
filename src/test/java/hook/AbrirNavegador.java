@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Open;
-import ui.LoginPage;
 
 public class AbrirNavegador implements Task {
 
@@ -21,8 +20,5 @@ public class AbrirNavegador implements Task {
 
     public static AbrirNavegador abrirNavegador(String url) {
         return Tasks.instrumented(AbrirNavegador.class, url);
-
     }
 }
-
-
